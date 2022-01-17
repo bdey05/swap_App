@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#fffcf5"
+
+
+    tools:context=".LoginFragment">
+    <ImageView
+        android:id="@+id/background1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical|center_horizontal">
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/subtitle"
+            android:layout_marginStart="25dp"
+
+            android:layout_marginBottom="-20dp"
+            android:fontFamily="@font/amiko_bold"
+            android:text="@string/app_name"
+
+            android:textColor="#B8D8D8"
+            android:textSize="60sp" />
+
+        <TextView
+            android:id="@+id/title2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/subtitle"
+            android:layout_marginLeft="-1dp"
+            android:layout_marginBottom="-20dp"
+            android:layout_toRightOf="@id/title"
+            android:fontFamily="@font/amiko_bold"
+
+            android:text="@string/app_name2"
+            android:textColor="#7A9E9F"
+            android:textSize="60sp" />
+
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/subtitle2"
+            android:layout_marginStart="25dp"
+
+            android:fontFamily="@font/amiko_semibold"
+            android:text="@string/desc"
+            android:textColor="#4F6367"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/subtitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/email"
+            android:layout_marginStart="25dp"
+
+            android:layout_marginBottom="0dp"
+            android:fontFamily="@font/amiko"
+            android:text="@string/desc2"
+            android:textColor="#4F6367"
+            android:textSize="17sp" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_above="@id/password"
+            android:layout_marginLeft="22dp"
+            android:layout_marginRight="22dp"
+            android:layout_marginBottom="5dp"
+            android:backgroundTint="#4F6367"
+            android:drawableLeft="@drawable/ic_mail"
+            android:drawablePadding="7sp"
+
+            android:fontFamily="@font/amiko"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:textColor="#4F6367"
+
+            android:textColorHighlight="#4F6367"
+            android:textColorHint="#4F6367"
+            android:textSize="17sp" />
+
+        <EditText
+
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="22dp"
+            android:layout_marginRight="22dp"
+            android:textColor="#4F6367"
+            android:drawablePadding="7sp"
+            android:textColorHint="#4F6367"
+            android:backgroundTint="#4F6367"
+            android:drawableLeft="@drawable/ic_key"
+            android:fontFamily="@font/amiko"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:padding="3dp"
+
+            android:textSize="17sp" />
+
+        <Button
+            android:id="@+id/btn_login"
+            android:text="@string/login"
+            android:layout_below="@id/password"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/amiko_semibold"
+            android:padding="0dp"
+
+            app:cornerRadius="5dp"
+            android:backgroundTint="#4F6367"
+            android:textColor="#fffcf5"
+            android:textSize="17sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom">
+
+        <TextView
+            android:id="@+id/swipeLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner_text"
+            android:fontFamily="@font/amiko_semibold"
+            android:paddingLeft="5dp"
+            android:paddingTop="6.5dp"
+            android:paddingRight="13dp"
+            android:paddingBottom="3.5dp"
+            android:text="@string/swipeRight"
+            android:textColor="#4F6367"
+            android:textSize="15sp"
+            app:cornerRadius="40dp" />
+    </RelativeLayout>
+</RelativeLayout>

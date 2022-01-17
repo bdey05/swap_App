@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/tradecontainer"
+    android:background="#fffcf5"
+    tools:context=".ViewTradesActivity">
+
+
+    <TextView
+        android:id="@+id/tradeTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="#4F6367"
+        android:padding="10dp"
+        android:fontFamily="@font/amiko_bold"
+        android:textSize="25sp"
+        android:text="Trades"/>
+
+    <ListView
+        android:id="@+id/tradeView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="#4F6367"
+        android:dividerHeight="5dp" />
+    <Button
+        android:id="@+id/backBtn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:fontFamily="@font/amiko_bold"
+        android:text="Back"/>
+
+</LinearLayout>
+

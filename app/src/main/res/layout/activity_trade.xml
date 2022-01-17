@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="#fffcf5"
+    tools:context=".TradeActivity">
+
+
+    <TextView
+        android:id="@+id/tradeTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="#4F6367"
+        android:padding="10dp"
+        android:fontFamily="@font/amiko_bold"
+        android:textSize="25sp"
+        android:text="Select item(s) to swap"/>
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+
+        android:background="#7A9E9F"
+        android:layout_below="@id/tradeTitle" />
+    <ListView
+        android:id="@+id/simpleListView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="#7A9E9F"
+        android:textColor="#4F6367"
+        android:dividerHeight="4dp" />
+
+    <TextView
+        android:id="@+id/test"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="#4F6367" />
+    <LinearLayout
+        android:id="@+id/lL2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:orientation="horizontal"
+        android:layout_weight="1" >
+        <Button
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:fontFamily="@font/amiko_bold"
+            android:text="Back"/>
+    <Button
+        android:id="@+id/tradeSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/amiko_bold"
+        android:text="Swap"
+        android:padding="5dp"/>
+    </LinearLayout>
+
+
+</LinearLayout>
+

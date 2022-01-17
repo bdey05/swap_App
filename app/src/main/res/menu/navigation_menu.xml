@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+
+    android:id="@+id/stuff_ID"
+    android:title="My Items"
+    android:icon="@drawable/ic_stuff"
+    android:fontFamily="@font/amiko_semibold"
+    android:textColor="#4F6367"
+    />
+    <item
+        android:icon="@drawable/ic_trade"
+    android:id="@+id/trade_ID"
+    android:title="Post Item"
+
+        android:fontFamily="@font/amiko_semibold"
+        android:textColor="#4F6367"
+    />
+
+    <item
+        android:id="@+id/listing_ID"
+        android:icon="@drawable/ic_listings"
+        android:title="Public Listings"
+        android:fontFamily="@font/amiko_semibold"
+        android:textColor="#4F6367"
+        />
+    <item
+        android:id="@+id/trades_ID"
+        android:icon="@drawable/ic_listings"
+        android:title="My Trades"
+        android:fontFamily="@font/amiko_semibold"
+        android:textColor="#4F6367"
+        />
+
+    <item
+        android:id="@+id/login_Page"
+        android:title="Sign Out"
+        android:icon="@drawable/ic_logout"
+        android:fontFamily="@font/amiko_semibold"
+        android:textColor="#4F6367"
+        />
+</menu>

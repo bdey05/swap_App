@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/2015d/AndroidStudioProjects/swapApp/app/src/main/res/layout/activity_home.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/bipra/swapApp/app/src/main/res/layout/activity_home.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/bipra/swapApp/app/src/main/res/layout/activity_trade.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/bipra/swapApp/app/src/main/res/layout/activity_view_trades.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/bipra/swapApp/app/src/main/res/layout/chat_activity.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/bipra/swapApp/app/src/main/res/layout/fragment_signup_fragment.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/bipra/swapApp/app/src/main/res/layout/layout_navigation_header.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/bipra/swapApp/app/src/main/res/layout/list.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/bipra/swapApp/app/src/main/res/layout/listing.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/bipra/swapApp/app/src/main/res/layout/single_view.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/bipra/swapApp/app/src/main/res/layout/trade_view.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/bipra/swapApp/app/src/main/res/layout/viewtrades.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/bipra/swapApp/app/src/main/res/menu/navigation_menu.xml" value="0.13020833333333334" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

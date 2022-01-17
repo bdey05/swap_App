@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">SW</string>
+    <string name="app_name2">APP</string>
+    <string name="swap_title_label">Item</string>
+    <string name="swap_title">Enter the item you want to swap</string>
+    <string name="swap_des_label">Description</string>
+    <string name="swap_des">Enter a short description of your item</string>
+    <string name="item_swapped_label">Swapped</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="desc">Trading Made Easy</string>
+    <string name="desc2">Enter your login information:</string>
+    <string name="swipeRight">Swipe right to signup!</string>
+    <string name="swipeLeft">Swipe left to login!</string>
+    <string name="signup">Sign</string>
+    <string name="signup2">up</string>
+    <string name="signup3">Signup</string>
+    <string name="retypepassword">Re-type Password</string>
+    <string name="name">Username</string>
+</resources>

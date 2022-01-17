@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#4F6367"
+    android:id="@+id/drawerLayout"
+    tools:context=".HomeActivity"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="#fffcf5"
+            android:gravity="center_vertical"
+            android:paddingStart="11dp"
+            android:paddingEnd="25dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageMenu"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:contentDescription="SWAPP"
+                android:gravity="center_vertical"
+                android:src="@drawable/ic_menu"
+                app:tint="#B8D8D8" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <RelativeLayout
+        android:layout_below="@id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="56dp"
+        >
+
+        <RelativeLayout
+
+            android:id="@+id/informationLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/iconLayout"
+
+            android:paddingBottom="25dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="-20dp"
+                android:fontFamily="@font/amiko_bold"
+                android:paddingStart="25dp"
+
+                android:text="@string/app_name"
+                android:textColor="#B8D8D8"
+                android:textSize="60dp" />
+
+            <TextView
+
+                android:id="@+id/title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="-20dp"
+                android:layout_toEndOf="@id/title"
+                android:fontFamily="@font/amiko_bold"
+                android:text="@string/app_name2"
+                android:textColor="#7A9E9F"
+                android:textSize="60dp" />
+
+            <TextView
+                android:id="@+id/name_ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:fontFamily="@font/amiko_semibold"
+                android:paddingStart="25dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="25dp"
+                android:text="Name: "
+                android:textColor="#fffcf5"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/email_ID"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/name_ID"
+                android:fontFamily="@font/amiko_semibold"
+                android:paddingStart="25dp"
+                android:paddingEnd="25dp"
+                android:text="Email: "
+                android:textColor="#fffcf5"
+                android:textSize="25dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:id="@+id/iconLayout">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="30dp"
+                android:elevation="0dp"
+                android:id="@+id/iconPic"
+                >
+                <ImageView
+                    android:layout_width="750px"
+                    android:layout_height="750px"
+                    android:id="@+id/homeIcon"
+                    tools:srcCompat="@tools:sample/avatars" />
+            </androidx.cardview.widget.CardView>
+
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iconLayout"
+            android:paddingTop="25dp"
+            android:id="@+id/user1"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_below="@id/user1">
+
+        </RelativeLayout>
+    </RelativeLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigationView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/layout_navigation_header"
+        app:menu="@menu/navigation_menu"
+        android:background="#fffcf5"
+        app:itemTextColor="#4F6367"
+        app:itemIconSize="18dp"
+        app:itemIconPadding="6dp"
+
+        />
+
+</androidx.drawerlayout.widget.DrawerLayout>
