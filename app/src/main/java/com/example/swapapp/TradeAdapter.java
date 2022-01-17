@@ -50,6 +50,7 @@ public class TradeAdapter extends BaseAdapter {
         CheckBox cb = (CheckBox) view.findViewById(R.id.cbBox);
         name.setText(names.get(i));
         id.setText(ids.get(i));
+        id.setVisibility(View.GONE);
         cb.setChecked(false);
         return view;
     }

@@ -3,6 +3,7 @@ package com.example.swapapp;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Color;
 import android.media.Image;
 import android.provider.ContactsContract;
 import android.util.Log;
@@ -13,6 +14,7 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -45,6 +47,7 @@ public class ViewTradesAdapter extends BaseAdapter {
     private FirebaseFirestore db;
     private DatabaseHelper mDatabaseHelper;
     private String ids = "";
+    private LinearLayout llTradeView;
 
     public ViewTradesAdapter(Context applicationContext, ArrayList<HashMap<String, Object>> trades, ArrayList<String>docIDS) {
         this.context = applicationContext;
@@ -71,6 +74,9 @@ public class ViewTradesAdapter extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         view = inflter.inflate(R.layout.viewtrades, null);
+        //view.setBackgroundColor(Color.parseColor("#5cb95d"));
+        llTradeView = (LinearLayout) view.findViewById(R.id.llTradeView);
+
         TextView name = (TextView) view.findViewById(R.id.tVName);
         TextView itemsReceiving = (TextView) view.findViewById(R.id.tVItemsReceiving);
         TextView itemsSending = (TextView) view.findViewById(R.id.tVItemsSending);
@@ -99,7 +105,7 @@ public class ViewTradesAdapter extends BaseAdapter {
                 }
             }
             name.setText("Trade with: " + nm);
-
+            ArrayList<String> newIDS = (ArrayList<String>) trades.get(i).get("ids");
             status.setText("Trade Accepted: " + (String) trades.get(i).get("accepted"));
             iReceive = (HashMap<String, Object>) trades.get(i).get("user1items");
             //String ids = "";
@@ -108,7 +114,7 @@ public class ViewTradesAdapter extends BaseAdapter {
                 String key = entry.getKey();
                 HashMap<String, Object> value = (HashMap<String, Object>) entry.getValue();
                 ids += value.get("id") + ",";
-                receiving += value.get("name") + ",";
+                receiving += value.get("name") + ", ";
             }
             String sending = "";
             iSend = (HashMap<String, Object>) trades.get(i).get("user2items");
@@ -120,12 +126,13 @@ public class ViewTradesAdapter extends BaseAdapter {
                 Log.d("ViewTradesAdapter", value);
                 //sending += value.get("name") + ",";*/
                 //ids += key + ",";
-                sending += value + ",";
+                sending += value + ", ";
             }
             ArrayList<String> strings = new ArrayList<>(Arrays.asList(sending.split(",")));
             String id1 = strings.get(1);
             sending = strings.get(0);
             ids += id1;
+
             if (sending.contains("'")) {
                 sending = sending.substring(0, sending.lastIndexOf(","));
             }
@@ -142,10 +149,18 @@ public class ViewTradesAdapter extends BaseAdapter {
                 itemsReceiving.setText("Receiving: " + receiving);
             }
             if(trades.get(i).get("pending").equals("true")){
-                pending.setText("Trade is pending");
+                view.setBackgroundColor(Color.parseColor("#f1ac4e"));
+                pending.setText("Trade pending");
             }
             else{
-                pending.setText("Trade request has been decided");
+                pending.setText("Trade decided");
+                String accepted = (String) trades.get(i).get("accepted");
+                if(accepted.equals("true")){
+                    view.setBackgroundColor(Color.parseColor("#5cb95d"));
+                }
+                else{
+                    view.setBackgroundColor(Color.parseColor("#d9524e"));
+                }
             }
 
             accept.setTag(i);
@@ -158,6 +173,8 @@ public class ViewTradesAdapter extends BaseAdapter {
                 }
             });*/
 
+            accept.setBackgroundColor(Color.parseColor("#5cb95d"));
+            decline.setBackgroundColor(Color.parseColor("#d9524e"));
             accept.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -196,7 +213,8 @@ public class ViewTradesAdapter extends BaseAdapter {
                             });
                     ArrayList<String> idStrings = new ArrayList<>(Arrays.asList(ids.split(",")));
                     Cursor data = mDatabaseHelper.getData();
-                    for(String i : idStrings){
+                    Log.d("Array", Arrays.deepToString(idStrings.toArray()));
+                    for(String i : newIDS){
                         mDatabaseHelper.deleteData(i);
                     }
                     Intent i = new Intent(context, HomeActivity.class);

@@ -110,6 +110,7 @@ public class TradeActivity extends AppCompatActivity {
                     }
                 }
                 Log.d("TradeActivity", temp.size() + "");
+                ArrayList<String> ids = new ArrayList<String>();
                 if(!temp.isEmpty()) {
                     int itemNum = 1;
                     for (int i = 0; i < temp.size(); i++) {
@@ -119,12 +120,17 @@ public class TradeActivity extends AppCompatActivity {
                         HashMap<String, Object> item = new HashMap<String, Object>();
                         item.put("name", name.getText().toString());
                         item.put("id", id.getText().toString());
+                        ids.add(id.getText().toString());
                         String temp = "Item" + itemNum;
                         itemsToTrade.put(temp, item);
                         itemNum++;
                     }
 
                     HashMap<String, Object> tradeRequest = new HashMap<String, Object>();
+                    //HashMap<String, Object> idStrings = new HashMap<String, Object>();
+                    //idStrings.put("ids", ids);
+                    ids.add(itemInfo.get(1));
+                    tradeRequest.put("ids", ids);
                     ArrayList<String> users = new ArrayList<String>();
                     users.add(user.getDisplayName());
                     users.add(itemInfo.get(0));
