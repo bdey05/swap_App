@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llTradeView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
@@ -18,15 +19,16 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:textColor="#4F6367"
+            android:textColor="#ffffff"
             android:fontFamily="@font/amiko"
+
             android:textSize="17sp"/>
         <TextView
             android:id="@+id/tVItemsReceiving"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:textColor="#4F6367"
+            android:textColor="#ffffff"
             android:fontFamily="@font/amiko"
             android:textSize="17sp"/>
         <TextView
@@ -34,32 +36,36 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:textColor="#4F6367"
+            android:textColor="#ffffff"
             android:fontFamily="@font/amiko"
+
             android:textSize="17sp"/>
         <TextView
             android:id="@+id/tVItemIDS"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:textColor="#4F6367"
+            android:textColor="#ffffff"
             android:fontFamily="@font/amiko"
+
             android:textSize="17sp"/>
         <TextView
             android:id="@+id/tVStatus"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:textColor="#4F6367"
+            android:textColor="#ffffff"
             android:fontFamily="@font/amiko"
+
             android:textSize="17sp"/>
         <TextView
             android:id="@+id/tVPending"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:textColor="#4F6367"
+            android:textColor="#ffffff"
             android:fontFamily="@font/amiko"
+
             android:textSize="17sp"/>
     </LinearLayout>
     <LinearLayout

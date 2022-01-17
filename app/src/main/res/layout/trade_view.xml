@@ -61,12 +61,14 @@
             android:id="@+id/backId"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="#4F6367"
             android:text="Back" />
 
         <Button
             android:id="@+id/trade"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="#4F6367"
             android:text="Swap" />
 
     </LinearLayout>

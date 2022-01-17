@@ -54,12 +54,14 @@
             android:layout_height="wrap_content"
             android:padding="5dp"
             android:fontFamily="@font/amiko_bold"
+            android:backgroundTint="#4F6367"
             android:text="Back"/>
     <Button
         android:id="@+id/tradeSubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/amiko_bold"
+        android:backgroundTint="#4F6367"
         android:text="Swap"
         android:padding="5dp"/>
     </LinearLayout>
