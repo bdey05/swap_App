@@ -133,14 +133,7 @@ public class SignupFragment extends Fragment {
                                                                                                         if (task.isSuccessful()) {
                                                                                                             Log.d(TAG, "Email sent.");
                                                                                                             db.collection("accounts").add(newUser);
-                                                                                                            AlertDialog.Builder builder = new AlertDialog.Builder(context);
-                                                                                                            builder.setTitle("AlertDialog with No Buttons");
-
-                                                                                                            builder.setMessage("Hide this message by just tapping anywhere outside the dialog box!");
-                                                                                                            AlertDialog diag = builder.create();
-
-                                                                                                            //Display the message!
-                                                                                                            diag.show();
+                                                                                                            
                                                                                                             Toast.makeText(getContext(), "Check email for verification", Toast.LENGTH_SHORT).show();
 
 
